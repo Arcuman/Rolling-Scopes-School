@@ -1,0 +1,67 @@
+.menu-btn {
+  position: relative;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+  span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: $maincolor;
+    position: absolute;
+    top: (50px - 4px)/2;
+    left: (50px - 40px)/2;
+    border-radius: 2px;
+    transition: background-color .3s ease-in-out;
+    &.top {
+      top: (50px - 4px)/2 - 12px;
+    }
+    &.bot {
+      top: (50px - 4px)/2 + 12px;
+    }
+  }
+  &:hover span {
+    background-color: lighten($maincolor, 15%);
+  }
+  &.active {
+    transform: translate(100px,0) rotate(180deg);
+    span {
+      transition: transform .3s ease-in-out,
+      opacity .3s ease-in-out;
+      left: (50px - 40px + (40px/1.6)/2)/2;
+      &.top {
+        transform: rotate(45deg);
+        transform-origin: left center;
+        top: (50px - 4px)/2 - 14px;
+      }
+      &.mid {
+        opacity: 0;
+      }
+      &.bot {
+        transform: rotate(-45deg);
+        transform-origin: left center;
+        top: (50px - 4px)/2 + 14px;
+      }
+    }
+    @media screen and (max-width: 4000px)
+    {
+      &.active {
+        transform: translate(250px, 0) rotate(180deg);
+      }
+    }
+    @media screen and (max-width: 1600px)
+    {
+      &.active {
+        transform: translate(140px, 0) rotate(180deg);
+      }
+    }
+    @media screen and (max-width: 700px)
+    {
+      &.active {
+        transform: translate(180px, 0) rotate(180deg);
+      }
+    }
+  }
+}

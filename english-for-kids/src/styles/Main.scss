@@ -1,0 +1,50 @@
+.main-container {
+  flex: 1 0 auto;
+  width:100%;
+  margin: 0 auto;
+  max-width: 1350px;
+  position: relative;
+  .container-word-card,
+  .container-card
+  {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    @import "WordCard/PlayPanel";
+    @import "WordCard/StartContainer";
+    @import "Categories/Categories";
+  }
+  .container-word-card{
+    @import "WordCard/WordCard";
+  }
+  .win, .fail{
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
+    position: relative;
+      img {
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @media screen and (max-width: 500px){
+          width: 300px;
+          height: 300px;
+        }
+      }
+  }
+  .fail-wrapper{
+    text-align: center;
+    margin: 0 auto;
+    color: black;
+    font-size: 46px;
+    font-weight: bold;
+  }
+  @import "Statistics/Statistics";
+}
+

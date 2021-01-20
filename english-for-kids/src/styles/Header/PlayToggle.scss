@@ -1,0 +1,84 @@
+//https://codepen.io/cl0udc0ntr0l/pen/xhBtF
+  .toggle{
+    position: relative;
+    width: 100px;
+    height: 40px;
+    border: 2px solid $white;
+    border-radius: 20px;
+    transition: border-color .6s  ease-out;
+    box-sizing: border-box;
+    &-on{
+      border-color: $white;
+      transition: all .5s .15s ease-out;
+    }
+    &-button{
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      width: 28px;
+      right: 59px;
+      background-color: $maincolor;
+      border-radius: 19px;
+      cursor: pointer;
+      transition: all .3s .1s, width .1s, top .1s, bottom .1s;
+    }
+    &-on &-button{
+      top: 3px;
+      width: 90px;
+      bottom: 3px;
+      right: 3px;
+      border-radius: 23px;
+      background-color: $maincolor;
+      box-shadow: 0 0 16px #4b7a8d;
+      transition: all .2s .1s, right .1s;
+    }
+    &-text-on{
+      display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0; right: 0;
+      line-height: 36px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: normal;
+      cursor: pointer;
+      color: rgba(0,0,0,0);
+    }
+    &-on &-text-on{
+      display: inline;
+      color: $black;
+      transition: color .3s .15s ;
+    }
+    &-on &-text-off{
+      display: none;
+    }
+    &-text-off{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 6px;
+      line-height: 36px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      color: $black;
+    }
+    .glow-comp{
+      position: absolute;
+      opacity: 0;
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      border-radius: 6px;
+      background-color: rgba(75, 122, 141, .1);
+      box-shadow: 0 0 12px rgba(75, 122, 141, .2);
+      transition: opacity 4.5s 1s;
+    }
+    &-on .glow-comp{
+      opacity: 1;
+      transition: opacity 1s;
+    }
+  }

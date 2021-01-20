@@ -1,0 +1,108 @@
+.nav {
+  box-shadow: 2px 0px 5px $white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  opacity: 0;
+  z-index: -1;
+  transition: transform .3s ease-in-out,
+  opacity .3s ease-in-out;
+  &.leftslide {
+    width: 300px;
+    height: 100%;
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate3d(-300px, 0px, 0px);
+  }
+  &.open {
+    height: 100%;
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+    z-index: 5;
+    transition: transform .3s ease-in-out,
+    opacity .3s ease-in-out;
+    .nav-inner {
+      li {
+        animation: fadeInRight .4s ease forwards;
+        animation-delay: .3s;
+      }
+    }
+  }
+  .nav-inner {
+    margin-left: 20px;
+    li {
+      position: relative;
+      margin-bottom: 15px;
+      opacity: 0;
+      transition: transform .3s ease-in-out;
+      a {
+        border-radius: 20px;
+        cursor: pointer;
+        display: block;
+        height: 100%;
+        text-decoration: none;
+        color: lighten($black,30%);
+        font-size: 24px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        font-weight: 600;
+        padding: 4px 8px;
+        transition: all .2s ease-in-out;
+        &:before {
+          content: "";
+          position: absolute;
+          left: -30px;
+          top: 50%;
+          display: block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $maincolor;
+          opacity: 0;
+          transition: all .3s ease-in-out;
+          cursor: pointer;
+        }
+        &:hover {
+          border-radius: 20px;
+          background-color: $secondcolor ;
+          color: $white;
+          transform: translate3d(15px ,0 ,0);
+          &:before {
+            content: "";
+            left: -15px;
+            opacity: 1;
+          }
+        }
+      }
+      .active{
+        border-radius: 20px;
+        background-color: $secondcolor;
+        color: $white;
+        transform: translate3d(15px, 0, 0);
+        &:before {
+          content: "";
+          left: -15px;
+          opacity: 1;
+        }
+      }
+    }
+    @media screen and (max-width: 400px) {
+      li a{
+        font-size: 20px;
+      }
+    }
+  }
+
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 30px;
+  }
+  100% {
+    opacity: 1;
+    left: 0px;
+  }
+}

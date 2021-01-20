@@ -1,0 +1,235 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	background-size: cover;
+	color: #fff;
+	text-shadow: 0px 0px 5px #000,
+		0px 0px 2px #000,
+		0px 0px 1px #000;
+	transition: background-image 1s ease-in-out;
+}
+
+h1 {
+	margin-bottom: 3rem;
+}
+
+h2 {
+	margin-bottom: 0.5rem;
+	opacity: 0.8;
+}
+
+.wrapper {
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 1rem;
+}
+
+.time {
+	font-size: 8rem;
+
+}
+
+.date {
+	font-size: 2rem;
+}
+
+.name {
+	transition: color 0.3s linear;
+	transition: font-size 0.3s ease-in-out;
+}
+
+.name:hover {
+	font-size: 1.1em;
+	cursor: pointer;
+	color: red;
+}
+
+.name:focus {
+	font-size: 1.1em;
+	cursor: pointer;
+	color: white;
+}
+
+.focus {
+	transition: color 0.3s ease-in-out;
+	transition: font-size 0.3s ease-in-out;
+}
+
+.focus:hover {
+	font-size: 1.1em;
+	cursor: pointer;
+	color: red;
+}
+
+.focus:focus {
+	font-size: 1.1em;
+	cursor: pointer;
+	color: white;
+}
+
+.quote {
+	display: flex;
+	flex-direction: column;
+	-webkit-text-stroke-width: 0px;
+	color: white;
+	margin: 0;
+	padding: 0.3em;
+	border-radius: 1em;
+	background-color: rgba(0, 0, 0, 0.4);
+	font-size: 1rem;
+	transition: all 1s ease-out;
+
+}
+
+.quote figcaption,
+.quote blockquote {
+	margin: 1em;
+}
+
+.quote figcaption {
+	text-align: right;
+	align-self: flex-end;
+}
+
+
+.weather {
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.weather-description {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.weather-other {
+	display: flex;
+	justify-content: space-between;
+}
+
+.humidity {
+	margin-left: 0.3rem;
+}
+
+.city {
+	transition: font-size 0.3s ease-in-out;
+}
+
+.city:hover {
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+
+.btn {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 60px;
+	border: 0;
+	background: url("https://www.flaticon.com/svg/static/icons/svg/1372/1372789.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	filter: sepia(0.5);
+	margin: 10px;
+}
+
+.btn:hover {
+	cursor: pointer;
+	filter: sepia(0.2);
+}
+
+.btn:active,
+.btn:focus {
+	outline: 0;
+}
+
+.btn:active {
+	transform: scale(1.02)
+}
+
+.second-row {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.btn-quote {
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	border: 0;
+	background: url("https://www.flaticon.com/svg/static/icons/svg/1372/1372789.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	filter: sepia(0.5);
+	margin: 10px;
+}
+
+.btn-quote:hover {
+	filter: sepia(0.2);
+}
+
+.btn-quote:active,
+.btn-quote:focus {
+	outline: 0;
+}
+
+.btn-quote:active {
+	transform: scale(1.02)
+}
+
+@media (max-width: 700px) {
+	.time {
+		font-size: 6rem;
+	}
+
+	.date {
+		font-size: 1.5rem;
+	}
+
+	.quote {
+		font-size: 0.9rem;
+	}
+
+}
+
+@media (max-width: 400px) {
+	.time {
+		font-size: 4rem;
+	}
+
+	.date {
+		font-size: 1rem;
+	}
+
+	.quote {
+		font-size: 0.8rem;
+	}
+}

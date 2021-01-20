@@ -1,0 +1,45 @@
+
+
+
+.header {
+  flex: 0 0 auto;
+  margin: 0 auto;
+  display: flex;
+  width: 85%;
+  height: 80px;
+  max-width: 1350px;
+  justify-content: space-between;
+  align-items: center;
+  &-logo{
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    color: $maincolor;
+    &:hover{
+      text-decoration: none;
+      color: $maincolor;
+      transform: scale(1.01);
+    }
+  }
+  @import "Navigation";
+  @media screen and (min-width: 1600px)
+  {
+    width: 100%;
+    max-width: 100%;
+  }
+  @media screen and (max-width: 480px)
+  {
+    &-logo{
+      display: none;
+    }
+  }
+}
+@import "PlayToggle";
+
+@media screen and (max-width: 1900px) {
+  body > header > nav > div.menu-btn.active{
+    transform: translate(0px,0) rotate(180deg);
+  }
+}
+

@@ -1,0 +1,27 @@
+{
+	"parser": "babel-eslint",
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": [
+		"airbnb-base"
+	],
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module"
+	},
+	"rules": {
+		"indent": [2, 4, {"SwitchCase": 1}],
+		"operator-linebreak": "warn",
+		"comma-dangle": "warn",
+		"no-plusplus": "warn",
+		"quotes": ["error", "double"],
+		"no-unused-expressions": "warn",
+		"import/extensions": "warn",
+		"no-continue": "warn",
+		"no-unused-vars": "warn",
+		"linebreak-style": 0
+	}
+}
+

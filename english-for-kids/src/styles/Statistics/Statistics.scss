@@ -1,0 +1,107 @@
+.statistics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  &-buttons {
+    margin-bottom: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-stat{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 50px;
+    background-color: $maincolor;
+    color: black;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 6px;
+    font-size: 25px;
+    line-height: 25px;
+    box-shadow: 3px 3px 15px 2px rgba(255,255,255,0.25), -3px -3px 15px 2px rgba(255,255,255,0.22);
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+  .repeat{
+    width: 250px;
+  }
+  &-table {
+    margin-bottom: 20px;
+    background: rgb(255, 255, 255);
+    box-shadow: 3px 3px 15px 2px rgba(255,255,255,0.25), -3px -3px 15px 2px rgba(255,255,255,0.25);
+    align-content: center;
+    width: 100%;
+    overflow-x: auto;
+    table {
+      color: black;
+      width: 100%;
+      border: 0px;
+      border-collapse: collapse;
+
+      thead {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      th, td {
+        text-align: center;
+        padding: 8px 5px;
+        font-size: 18px;
+        border-bottom: 1px solid #e8e9eb;
+
+        @media screen and (max-width: 750px) {
+          padding: 5px 3px;
+          font-size: 14px;
+        }
+        @media screen and (max-width: 600px) {
+          padding: 3px 2px;
+          font-size: 14px;
+        }
+      }
+        th {
+          font-weight: 900;
+          text-shadow: none;
+          color: black;
+          cursor: pointer;
+
+        }
+      }
+      tr:nth-child(even){
+        background: rgba(200, 200, 200, 0.2);
+      }
+    .spec{
+      min-width: 120px;
+      @media screen and (max-width: 700px) {
+        min-width: 90px;
+      }
+      @media screen and (max-width: 600px) {
+        min-width: 60px;
+      }
+    }
+    .desc {
+      &::after {
+        content: "\2191";
+        font-weight: 900;
+        padding-left: 2px;
+        transform: rotate(45deg);
+      }
+    }
+    .asc {
+      &::after {
+        content: "\2193";
+        font-weight: 900;
+        padding-left: 2px;
+        transform: rotate(45deg);
+      }
+    }
+    }
+}

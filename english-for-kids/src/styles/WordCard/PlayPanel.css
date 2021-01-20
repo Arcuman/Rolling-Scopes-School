@@ -1,0 +1,14 @@
+.play-panel {
+  position: fixed;
+  left: 0;
+}
+.play-panel-play {
+  width: 30px;
+  height: 30px;
+}
+.play-panel-repeat {
+  width: 30px;
+  height: 30px;
+}
+
+/*# sourceMappingURL=PlayPanel.css.map */

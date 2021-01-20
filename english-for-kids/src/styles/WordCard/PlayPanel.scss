@@ -1,0 +1,52 @@
+.play-panel{
+  width: 90px;
+  height: 100px;
+  position: fixed;
+  z-index: 1;
+  right: -130px;
+  top: 40%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $maincolor;
+
+  transition: 0.5s ease;
+  &-play {
+    top:25%;
+    right: -120px;
+    z-index: 15;
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    fill: $secondcolor;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s ease;
+  }
+  &-repeat {
+    top:25%;
+    right: -120px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    fill: $secondcolor;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s ease;
+  }
+  &-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .active {
+      right: 15px;
+      opacity: 1;
+    }
+  }
+}
+
+.on{
+  right: 0;
+}
