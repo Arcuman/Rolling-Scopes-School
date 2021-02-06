@@ -6,4 +6,4 @@
 6. Gem-puzzle game -  https://arcuman-gem-puzzle.netlify.app/
 7. English for kids - https://borto-english.netlify.app/ - SPA with self-written Redux
 8. COVID-19 - https://arcuam-covid.netlify.app/ - dashboard about COVID, made in team
-9. HearthstoneClone - multiplayer game making in team, stack of technologies: Node.js + Express + SocketIO, Postres(without ORM), Phaser - still in progress until 3 February  
+9. HearthstoneClone - multiplayer game making in team, stack of technologies: Node.js + Express + SocketIO, Postres(without ORM), Phaser - https://github.com/Arcuman/rsclone/pull/65  
